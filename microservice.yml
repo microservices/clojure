@@ -1,0 +1,32 @@
+omg: 1
+info:
+  version: 1.0.0
+  title: Your microservice
+  description: Describe your microservice
+  license:
+    name: Apache 2.0
+    url: https://opensource.org/licenses/Apache-2.0
+lifecycle:
+  startup:
+    command: []
+health:
+  http:
+    path: /health
+    port: 8080
+actions:
+  message:
+    http:
+      path: /message
+      method: post
+      port: 8080
+    arguments:
+      name:
+        type: string
+        required: true
+        in: requestBody
+    output:
+      contentType: application/json
+      type: object
+      properties:
+        message:
+          type: string
