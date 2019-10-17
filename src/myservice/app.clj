@@ -10,11 +10,11 @@
 (s/defschema UserResponse
   {:message s/Str})
 
-(defapi app
+(def app (api
     (GET "/health" []
       (ok "OK"))
 
     (POST "/message" []
       :body [{:keys [name]} User]
       :return UserResponse
-      (ok {:message (str "Hello " name)})))
+      (ok {:message (str "Hello " name)}))))
