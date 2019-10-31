@@ -5,6 +5,6 @@
  :ring {:handler myservice.app/app :port 8080}
  :min-lein-version "2.0.0"
  :uberjar-name "microservice"
- :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]]
+ :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "4.0.1"]]
                  :plugins [[lein-ring "0.12.5"]]}
             :uberjar {:aot :all}})
