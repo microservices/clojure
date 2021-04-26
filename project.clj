@@ -1,6 +1,6 @@
 (defproject microservice-app "0.1.0-SNAPSHOT"
  :description "My microservice"
- :dependencies [[org.clojure/clojure "1.10.1"]
+ :dependencies [[org.clojure/clojure "1.10.3"]
                 [metosin/compojure-api "2.0.0-SNAPSHOT"]]
  :ring {:handler myservice.app/app :port 8080}
  :min-lein-version "2.0.0"
